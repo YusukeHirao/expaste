@@ -1,0 +1,33 @@
+{
+  "name": "expaste",
+  "version": "0.0.1",
+  "homepage": "https://github.com/YusukeHirao/expaste",
+  "authors": [
+    "YusukeHirao"
+  ],
+  "description": "Parser for pasted data that is copied from spreadsheet on Excel and Google Drive",
+  "main": "lib/expaste.min.js",
+  "keywords": [
+    "paste",
+    "browser",
+    "form",
+    "clipboard",
+    "event",
+    "excel",
+    "google",
+    "drive",
+    "spreadsheet",
+    "table",
+    "markdown"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "bower_components",
+    "gruntfile.js",
+    "node_modules",
+    "test"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.3"
+  }
+}

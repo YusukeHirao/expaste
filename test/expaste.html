@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Testing expaste.js</title>
+<link rel="stylesheet" href="../node_modules/qunitjs/qunit/qunit.css">
+
+</head>
+<body>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<style>
+textarea {
+	width: 500px;
+	height: 300px;
+	font-family: Ricty;
+}
+</style>
+<textarea id="input-fixture"></textarea>
+
+<!-- Libraries -->
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+
+<!-- Core Module -->
+<script src="../lib/expaste.js"></script>
+
+<!-- Qunit -->
+<script src="../node_modules/qunitjs/qunit/qunit.js"></script>
+
+<!-- Test Code -->
+<script>
+"use strict";
+
+test('HTML Table to', function() {
+
+	var pasted = '<meta charset="utf-8"><table class="wikitable" style="font-size: 14px; margin: 1em 0px; border: 1px solid rgb(170, 170, 170); border-collapse: collapse; color: black; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22.3999996185303px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(249, 249, 249);"><tbody><tr><th style="border: 1px solid rgb(170, 170, 170); padding: 0.3em 0.4em; text-align: center; background-color: rgb(242, 242, 242);">Header 1</th><th style="border: 1px solid rgb(170, 170, 170); padding: 0.3em 0.4em; text-align: center; background-color: rgb(242, 242, 242);">Header 2</th><th style="border: 1px solid rgb(170, 170, 170); padding: 0.3em 0.4em; text-align: center; background-color: rgb(242, 242, 242);">Header 3</th></tr><tr><td style="border: 1px solid rgb(170, 170, 170); padding: 0.3em 0.4em;">row 1, cell 1</td><td style="border: 1px solid rgb(170, 170, 170); padding: 0.3em 0.4em;">row 1, cell 2</td><td style="border: 1px solid rgb(170, 170, 170); padding: 0.3em 0.4em;">row 1, cell 3</td></tr><tr><td style="border: 1px solid rgb(170, 170, 170); padding: 0.3em 0.4em;">row 2, cell 1</td><td style="border: 1px solid rgb(170, 170, 170); padding: 0.3em 0.4em;">row 2, cell 2</td><td style="border: 1px solid rgb(170, 170, 170); padding: 0.3em 0.4em;">row 2, cell 3</td></tr></tbody></table>';
+
+	var ep = expaste(pasted);
+
+	var p = new DOMParser();
+
+	equal(ep.toMarkdown(), 'name         |name         |name         \n-------------|-------------|-------------\nHeader 1     |Header 2     |Header 3     \nrow 1, cell 1|row 1, cell 2|row 1, cell 3\nrow 2, cell 1|row 2, cell 2|row 2, cell 3', 'Markdown');
+	equal(ep.toCSV(), 'Header 1,Header 2,Header 3\n\"row 1, cell 1\",\"row 1, cell 2\",\"row 1, cell 3\"\n\"row 2, cell 1\",\"row 2, cell 2\",\"row 2, cell 3\"', 'CSV');
+});
+
+/*
+document.getElementById('input-fixture').addEventListener('paste', function (e) {
+	var ep = expaste.getDataByEvent(e);
+	console.log(ep.toJSONStringify());
+	console.log(ep.toCSV());
+	console.log(ep.toTSV());
+	var md = ep.toMarkdown();
+	console.log(md);
+	console.log(ep.origin);
+	this.value = md;
+	e.preventDefault();
+}, false);
+*/
+</script>
+
+
+</body>
+</html>
