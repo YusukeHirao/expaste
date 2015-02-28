@@ -1,6 +1,6 @@
 {
   "name": "expaste",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Parser for pasted data that is copied from spreadsheet on Excel and Google Drive",
   "main": "lib/expaste.js",
   "scripts": {

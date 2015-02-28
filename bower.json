@@ -1,6 +1,6 @@
 {
   "name": "expaste",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/YusukeHirao/expaste",
   "authors": [
     "YusukeHirao"
@@ -25,7 +25,8 @@
     "bower_components",
     "gruntfile.js",
     "node_modules",
-    "test"
+    "test",
+    ".travis.yml"
   ],
   "devDependencies": {
     "jquery": "~2.1.3"
