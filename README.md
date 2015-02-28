@@ -22,7 +22,7 @@ document.getElementById('input').addEventListener('paste', function (e) {
 	var tsv = ep.toTSV();
 	var md = ep.toMarkdown();
 
-	// overwrited paste
+	// overwritten paste
 	this.value = md;
 
 	e.preventDefault();
@@ -43,7 +43,7 @@ $('#input').on('paste', function (e) {
 	var tsv = ep.toTSV();
 	var md = ep.toMarkdown();
 
-	// overwrited paste
+	// overwritten paste
 	$(this).val(md);
 
 	return false;
