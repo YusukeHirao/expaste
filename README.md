@@ -1,6 +1,8 @@
 # expaste
 Parser for pasted data that is copied from spreadsheet on Excel and Google Drive
 
+[![Build Status](https://travis-ci.org/YusukeHirao/expaste.svg)](https://travis-ci.org/YusukeHirao/expaste)
+
 ## demo
 
 ex.) Markdown output
