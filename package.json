@@ -1,0 +1,38 @@
+{
+  "name": "expaste",
+  "version": "0.1.0",
+  "description": "Parser for pasted data that is copied from spreadsheet on Excel and Google Drive",
+  "main": "lib/expaste.js",
+  "scripts": {
+    "test": "grunt qunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YusukeHirao/expaste.git"
+  },
+  "keywords": [
+    "paste",
+    "browser",
+    "form",
+    "clipboard",
+    "event",
+    "excel",
+    "google",
+    "drive",
+    "spreadsheet",
+    "table",
+    "markdown"
+  ],
+  "author": "YusukeHirao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YusukeHirao/expaste/issues"
+  },
+  "homepage": "https://github.com/YusukeHirao/expaste",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-qunit": "^0.5.2",
+    "grunt-contrib-uglify": "^0.8.0",
+    "qunitjs": "^1.17.1"
+  }
+}
