@@ -7,6 +7,8 @@ Parser for pasted data that is copied from spreadsheet on Excel and Google Drive
 
 ex.) Markdown output
 
+[Demo Page](http://yusukehirao.github.io/expaste/sample/expaste.html)
+
 ![demo](demo.gif)
 
 ## usage
@@ -52,3 +54,14 @@ $('#input').on('paste', function (e) {
 
 });
 ```
+
+## Support
+
+- Chrome
+- Safari
+- Firefox
+
+### Not support yet
+
+- IE9-11
+
