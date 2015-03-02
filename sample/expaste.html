@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Sample expaste.js</title>
+	<script src="../lib/expaste.js"></script>
+	<style>
+		textarea {
+			width: 500px;
+			height: 300px;
+			font-family: Ricty;
+		}
+	</style>
+
+</head>
+<body>
+
+	<textarea id="input-fixture"></textarea>
+
+	<script>
+		document.getElementById('input-fixture').addEventListener('paste', function (e) {
+			var ep = expaste.getDataByEvent(e);
+			console.log(ep.toJSONStringify());
+			console.log(ep.toCSV());
+			console.log(ep.toTSV());
+			var md = ep.toMarkdown();
+			console.log(md);
+			console.log(ep.origin);
+			this.value = md;
+			e.preventDefault();
+		}, false);
+	</script>
+
+</body>
+</html>
