@@ -61,7 +61,11 @@ $('#input').on('paste', function (e) {
 - Safari
 - Firefox
 
-### Not support yet
+### unsupport
 
-- IE9-11
+- Internet Explorer
+
+> Partial support in IE refers using a non-standard method of interacting with the clipboard.
+[Can I use](http://caniuse.com/#feat=clipboard)
+
 
