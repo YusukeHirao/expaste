@@ -1,7 +1,11 @@
 # expaste
 Parser for pasted data that is copied from spreadsheet on Excel and Google Drive
 
+[![npm version](https://badge.fury.io/js/expaste.svg)](http://badge.fury.io/js/expaste)
+[![Bower version](https://badge.fury.io/bo/expaste.svg)](http://badge.fury.io/bo/expaste)
 [![Build Status](https://travis-ci.org/YusukeHirao/expaste.svg)](https://travis-ci.org/YusukeHirao/expaste)
+[![Dependency Status](https://david-dm.org/YusukeHirao/expaste.svg)](https://david-dm.org/YusukeHirao/expaste)
+[![devDependency Status](https://david-dm.org/YusukeHirao/expaste/dev-status.svg)](https://david-dm.org/YusukeHirao/expaste#info=devDependencies)
 
 ## demo
 
